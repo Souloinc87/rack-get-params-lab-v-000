@@ -15,11 +15,11 @@ class Application
       search_term = req.params["q"]
       resp.write handle_search(search_term)
     elsif @@cart.empty?
-      resp.write "You cart is empty"
+      resp.write "Your cart is empty"
     else
       @@cart.each do |car|
         resp.write "#{car}\n"
-      end 
+      end
     end
 
     resp.finish
