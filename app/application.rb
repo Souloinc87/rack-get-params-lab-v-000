@@ -17,7 +17,9 @@ class Application
     elsif @@cart.empty?
       resp.write "You cart is empty"
     else
-      resp.write "Path Not Found"
+      @@cart.each do |car|
+        resp.write "#{car}\n"
+      end 
     end
 
     resp.finish
